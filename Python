@@ -1,0 +1,8 @@
+first = (input())
+second = (input())
+action = input()
+operations = {"mod": "%", "div": "//", "pow": "**"}
+try:
+    print(eval("(" + str(first) + ")" + operations.get(action, action) + str(second)))
+except ZeroDivisionError:
+    print('Деление на 0!')
